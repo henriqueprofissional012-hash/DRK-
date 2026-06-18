@@ -331,6 +331,30 @@ h2 span {
   gap: 14px;
 }
 
+.hero-depth {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  perspective: 900px;
+}
+
+.hero-depth span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  color: rgba(255, 255, 255, 0.86);
+  background: rgba(5, 22, 52, 0.62);
+  border: 1px solid rgba(84, 163, 255, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(0, 109, 255, 0.16);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  transform: rotateX(8deg) translateZ(0);
+}
+
 .hero-art {
   display: none !important;
 }
@@ -572,6 +596,49 @@ h2 span {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
+}
+
+.catalog-chip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 74px;
+  padding: 16px;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(14, 42, 82, 0.76), rgba(3, 14, 33, 0.9)),
+    var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.catalog-chip::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -60% auto;
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle, rgba(248, 189, 36, 0.28), transparent 66%);
+}
+
+.catalog-chip:hover {
+  transform: translateY(-4px) rotateX(3deg);
+  border-color: rgba(248, 189, 36, 0.55);
+}
+
+.catalog-chip span {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.catalog-chip strong {
+  color: var(--gold-400);
+  font-size: 0.74rem;
+  text-transform: uppercase;
 }
 
 .catalog-card {
@@ -1000,6 +1067,47 @@ h2 span {
     gap: 12px;
   }
 
+  .product-grid {
+    display: flex;
+    grid-template-columns: none;
+    margin-inline: -18px;
+    padding: 0 18px 12px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .product-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-card {
+    flex: 0 0 min(82vw, 340px);
+    scroll-snap-align: start;
+  }
+
+  .catalog-grid.compact {
+    display: flex;
+    grid-template-columns: none;
+    margin-inline: -18px;
+    padding: 0 18px 12px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .catalog-grid.compact::-webkit-scrollbar {
+    display: none;
+  }
+
+  .catalog-chip {
+    flex: 0 0 178px;
+    scroll-snap-align: start;
+    min-height: 72px;
+  }
+
   .product-card,
   .catalog-card {
     min-height: 0;
@@ -1031,6 +1139,17 @@ h2 span {
 
   .catalog-actions {
     grid-template-columns: 1fr;
+  }
+
+  .benefits-bar {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .benefits-bar article {
+    flex: 0 0 78vw;
+    scroll-snap-align: start;
   }
 
   .benefits-bar {
@@ -1086,11 +1205,37 @@ h2 span {
 
   .hero {
     padding-top: 36px;
-    padding-bottom: 205px;
+    padding-bottom: 190px;
     background:
       linear-gradient(180deg, rgba(2, 8, 22, 1) 0%, rgba(2, 8, 22, 0.98) 58%, rgba(2, 8, 22, 0.5) 77%, rgba(2, 8, 22, 0.08) 100%),
       url("assets/images/hero-drk.png") center bottom / 168% auto no-repeat,
       #020816;
+  }
+
+  .hero-depth {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .hero-depth span {
+    min-height: 32px;
+    padding: 0 10px;
+    font-size: 0.68rem;
+  }
+
+  .products,
+  .catalog,
+  .filters {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .product-card {
+    flex-basis: 84vw;
+  }
+
+  .catalog-chip {
+    flex-basis: 154px;
   }
 
   .eyebrow {

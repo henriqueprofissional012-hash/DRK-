@@ -1,4 +1,4 @@
-// DRK maintenance notes:
+﻿// DRK maintenance notes:
 // 1. Replace commercial links in SETTINGS when WhatsApp, e-mail, catalog PDFs or product URLs change.
 // 2. Replace files in assets/images using the same filenames to update photos without changing layout.
 // 3. Add technical descriptions, PDFs and tables directly in the data arrays below when available.
@@ -10,48 +10,48 @@ const SETTINGS = {
 };
 
 const values = [
-  ["◇", "Qualidade", "Equipamentos e processos pensados para desempenho consistente."],
-  ["✓", "Confiança", "Relacionamento técnico e comercial com clareza em cada etapa."],
-  ["○", "Transparência", "Informação organizada para facilitar decisões de compra."],
-  ["◎", "Respeito ao cliente", "Atendimento próximo, cuidadoso e orientado à solução."],
-  ["✦", "Inovação", "Modernização contínua em produtos, comunicação e suporte."],
-  ["↗", "Melhoria contínua", "Evolução constante para entregar mais eficiência ao mercado."],
+  ["â—‡", "Qualidade", "Equipamentos e processos pensados para desempenho consistente."],
+  ["âœ“", "ConfianÃ§a", "Relacionamento tÃ©cnico e comercial com clareza em cada etapa."],
+  ["â—‹", "TransparÃªncia", "InformaÃ§Ã£o organizada para facilitar decisÃµes de compra."],
+  ["â—Ž", "Respeito ao cliente", "Atendimento prÃ³ximo, cuidadoso e orientado Ã  soluÃ§Ã£o."],
+  ["âœ¦", "InovaÃ§Ã£o", "ModernizaÃ§Ã£o contÃ­nua em produtos, comunicaÃ§Ã£o e suporte."],
+  ["â†—", "Melhoria contÃ­nua", "EvoluÃ§Ã£o constante para entregar mais eficiÃªncia ao mercado."],
 ];
 
 const featuredProducts = [
   {
-    name: "Bombas Hidráulicas Série ADO",
-    text: "Indicada para banheiras, ofurôs e spas, com alta durabilidade e excelente desempenho.",
+    name: "Bombas HidrÃ¡ulicas SÃ©rie ADO",
+    text: "Indicada para banheiras, ofurÃ´s e spas, com alta durabilidade e excelente desempenho.",
     image: "produto-bomba-ado.png",
   },
   {
-    name: "Bombas Hidráulicas Série CA",
-    text: "Compacta, econômica e de fácil instalação, ideal para diferentes aplicações hidráulicas.",
+    name: "Bombas HidrÃ¡ulicas SÃ©rie CA",
+    text: "Compacta, econÃ´mica e de fÃ¡cil instalaÃ§Ã£o, ideal para diferentes aplicaÃ§Ãµes hidrÃ¡ulicas.",
     image: "produto-bomba-ca.png",
   },
   {
-    name: "Bombas Hidráulicas Série CAE",
-    text: "Solução compacta e eficiente para instalações que exigem praticidade e confiabilidade.",
+    name: "Bombas HidrÃ¡ulicas SÃ©rie CAE",
+    text: "SoluÃ§Ã£o compacta e eficiente para instalaÃ§Ãµes que exigem praticidade e confiabilidade.",
     image: "produto-bomba-cae.png",
   },
   {
-    name: "Bombas Hidráulicas Série CB",
-    text: "Com motores de alta potência, indicada para aplicações que exigem maior rendimento.",
+    name: "Bombas HidrÃ¡ulicas SÃ©rie CB",
+    text: "Com motores de alta potÃªncia, indicada para aplicaÃ§Ãµes que exigem maior rendimento.",
     image: "produto-bomba-cb.png",
   },
   {
-    name: "Bombas Hidráulicas Série CD",
-    text: "Ideal para abastecimento de instalações de pequeno e médio porte e pressurização de redes.",
+    name: "Bombas HidrÃ¡ulicas SÃ©rie CD",
+    text: "Ideal para abastecimento de instalaÃ§Ãµes de pequeno e mÃ©dio porte e pressurizaÃ§Ã£o de redes.",
     image: "produto-bomba-cd.png",
   },
   {
-    name: "Bombas Hidráulicas Série CF",
-    text: "Desenvolvida para aplicações de combate a incêndio e conexões específicas.",
+    name: "Bombas HidrÃ¡ulicas SÃ©rie CF",
+    text: "Desenvolvida para aplicaÃ§Ãµes de combate a incÃªndio e conexÃµes especÃ­ficas.",
     image: "produto-bomba-cf.png",
   },
   {
-    name: "Filtros Hidráulicos / Tratamento de Água",
-    text: "Soluções para melhorar a qualidade da água em residências, condomínios, comércios e indústrias.",
+    name: "Filtros HidrÃ¡ulicos / Tratamento de Ãgua",
+    text: "SoluÃ§Ãµes para melhorar a qualidade da Ã¡gua em residÃªncias, condomÃ­nios, comÃ©rcios e indÃºstrias.",
     image: "produto-filtros.png",
   },
 ];
@@ -91,83 +91,83 @@ const pumpSeries = [
 
 const filters = [
   {
-    name: "Série FAPI",
-    text: "Produzido em aço inox, projetado para tratamento de água potável, com opções de cargas filtrantes ou cartuchos.",
+    name: "SÃ©rie FAPI",
+    text: "Produzido em aÃ§o inox, projetado para tratamento de Ã¡gua potÃ¡vel, com opÃ§Ãµes de cargas filtrantes ou cartuchos.",
     image: "filtro-fapi.png",
   },
   {
-    name: "Série PA, PC e PM",
-    text: "Produzidos em aço carbono, ideais para tratamento de água de uso industrial.",
+    name: "SÃ©rie PA, PC e PM",
+    text: "Produzidos em aÃ§o carbono, ideais para tratamento de Ã¡gua de uso industrial.",
     image: "filtro-pa-pc-pm.png",
   },
   {
     name: "Filtro de Gotejamento",
-    text: "Fornece água limpa a partir de rios, lagos e lagoas, evitando sedimentos em suspensão.",
+    text: "Fornece Ã¡gua limpa a partir de rios, lagos e lagoas, evitando sedimentos em suspensÃ£o.",
     image: "filtro-gotejamento.png",
   },
   {
     name: "Separador Hidrociclone",
-    text: "Projetado para separar areia e lama de poços e rios, prolongando a vida útil dos filtros seguintes.",
+    text: "Projetado para separar areia e lama de poÃ§os e rios, prolongando a vida Ãºtil dos filtros seguintes.",
     image: "separador-hidrociclone.png",
   },
   {
-    name: "Série DLP",
+    name: "SÃ©rie DLP",
     text: "Filtro para piscina em polietileno rotomoldado, anticorrosivo e com tanque monobloco sem emendas.",
     image: "filtro-dlp.png",
   },
   {
-    name: "Casa de Máquinas",
-    text: "Produto com encanamento embutido e acionador anti-choque, facilitando a manutenção.",
+    name: "Casa de MÃ¡quinas",
+    text: "Produto com encanamento embutido e acionador anti-choque, facilitando a manutenÃ§Ã£o.",
     image: "casa-de-maquinas.png",
   },
   {
-    name: "Série DFL",
-    text: "Filtro em fibra de vidro com estrutura reforçada e maior durabilidade.",
+    name: "SÃ©rie DFL",
+    text: "Filtro em fibra de vidro com estrutura reforÃ§ada e maior durabilidade.",
     image: "filtro-dfl.png",
   },
   {
-    name: "Série D",
-    text: "Indicada para piscinas olímpicas e grandes volumes de água.",
+    name: "SÃ©rie D",
+    text: "Indicada para piscinas olÃ­mpicas e grandes volumes de Ã¡gua.",
     image: "produto-filtros.png",
   },
   {
-    name: "Sistema de Pressurização",
-    text: "Sistema pneumático capaz de pressurizar a água com força equivalente a um reservatório posicionado a 20 metros de altura.",
+    name: "Sistema de PressurizaÃ§Ã£o",
+    text: "Sistema pneumÃ¡tico capaz de pressurizar a Ã¡gua com forÃ§a equivalente a um reservatÃ³rio posicionado a 20 metros de altura.",
     image: "sistema-pressurizacao.png",
   },
   {
     name: "DRKFEST",
-    text: "Sistema de esterilização física da água por meio da destruição do DNA de microrganismos.",
+    text: "Sistema de esterilizaÃ§Ã£o fÃ­sica da Ã¡gua por meio da destruiÃ§Ã£o do DNA de microrganismos.",
     image: "drkfest.png",
   },
 ];
 
 const regions = [
-  ["Região Norte", "Amazonas, Roraima, Amapá, Pará, Tocantins, Rondônia e Acre."],
-  ["Região Nordeste", "Maranhão, Piauí, Ceará, Rio Grande do Norte, Pernambuco, Paraíba, Sergipe, Alagoas e Bahia."],
-  ["Região Centro-Oeste", "Mato Grosso, Mato Grosso do Sul, Goiás e Distrito Federal."],
-  ["Região Sudeste", "São Paulo, Rio de Janeiro, Espírito Santo e Minas Gerais."],
-  ["Região Sul", "Paraná, Rio Grande do Sul e Santa Catarina."],
+  ["RegiÃ£o Norte", "Amazonas, Roraima, AmapÃ¡, ParÃ¡, Tocantins, RondÃ´nia e Acre."],
+  ["RegiÃ£o Nordeste", "MaranhÃ£o, PiauÃ­, CearÃ¡, Rio Grande do Norte, Pernambuco, ParaÃ­ba, Sergipe, Alagoas e Bahia."],
+  ["RegiÃ£o Centro-Oeste", "Mato Grosso, Mato Grosso do Sul, GoiÃ¡s e Distrito Federal."],
+  ["RegiÃ£o Sudeste", "SÃ£o Paulo, Rio de Janeiro, EspÃ­rito Santo e Minas Gerais."],
+  ["RegiÃ£o Sul", "ParanÃ¡, Rio Grande do Sul e Santa Catarina."],
 ];
 
 const assistance = [
   {
-    name: "JJ Manutenções Desentupidora e Hidrojato LTDA",
-    address: "Q QE 40 Conjunto C Lote 13, S/N, Guará II, Brasília-DF, CEP 71070-400",
-    contact: "João",
+    name: "JJ ManutenÃ§Ãµes Desentupidora e Hidrojato LTDA",
+    address: "Q QE 40 Conjunto C Lote 13, S/N, GuarÃ¡ II, BrasÃ­lia-DF, CEP 71070-400",
+    contact: "JoÃ£o",
     email: "joaomotorei@gmail.com",
     phone: "(61) 9905-6644",
   },
   {
-    name: "Eletro Dinâmica Automação Motores e Equipamentos",
-    address: "SOF Sul/QD 03, Conjunto A, Lote 16, CEP 71215-216, Guará-DF",
+    name: "Eletro DinÃ¢mica AutomaÃ§Ã£o Motores e Equipamentos",
+    address: "SOF Sul/QD 03, Conjunto A, Lote 16, CEP 71215-216, GuarÃ¡-DF",
     contact: "Sra. Maiara Silva",
     email: "maiara@eletrodinamicamotores.com.br",
     phone: "(61) 3233-2179 / (61) 3573-4260 / (61) 99506-5839",
   },
   {
     name: "AGG Eletromotores",
-    address: "Av. Inocêncio Serafico, nº 455, CEP 06320-290, Carapicuíba-SP",
+    address: "Av. InocÃªncio Serafico, nÂº 455, CEP 06320-290, CarapicuÃ­ba-SP",
     contact: "Sr. Antonio Pedroso",
     email: "contato@aggeletromotores.com.br",
     phone: "(11) 4374-0849 / (11) 98731-7850",
@@ -185,7 +185,7 @@ function productCard(item) {
       <div class="product-body">
         <h3>${item.name}</h3>
         <p>${item.text}</p>
-        <a class="text-link" href="#contato">Ver detalhes →</a>
+        <a class="text-link" href="#contato">Ver detalhes â†’</a>
       </div>
     </article>
   `;
@@ -210,14 +210,10 @@ function renderContent() {
   document.querySelector("#pumpCatalog").innerHTML = pumpSeries
     .map(
       (series) => `
-        <article class="catalog-card">
-          <img src="${imagePath("produto-bomba-ca.png")}" alt="Bomba Hidráulica Série ${series}" loading="lazy" />
-          <h3>Série ${series}</h3>
-          <div class="catalog-actions">
-            <a href="#contato">Solicitar informações</a>
-            <a href="#contato">Ver produto</a>
-          </div>
-        </article>
+        <a class="catalog-chip" href="#contato" aria-label="Solicitar informacoes da Serie ${series}">
+          <span>Serie ${series}</span>
+          <strong>Consultar</strong>
+        </a>
       `,
     )
     .join("");
@@ -238,7 +234,7 @@ function renderContent() {
       (item) => `
         <article class="assistance-card">
           <h3>${item.name}</h3>
-          <p><strong>Endereço:</strong><br />${item.address}</p>
+          <p><strong>EndereÃ§o:</strong><br />${item.address}</p>
           <p><strong>Contato:</strong> ${item.contact}</p>
           <p><strong>E-mail:</strong> ${item.email}</p>
           <p><strong>Telefone:</strong> ${item.phone}</p>
@@ -294,13 +290,46 @@ function syncCommercialLinks() {
   });
 
   document.querySelectorAll('a[href="#produtos"]').forEach((link) => {
-    if (link.textContent.toLowerCase().includes("catálogo")) {
+    if (link.textContent.toLowerCase().includes("catÃ¡logo")) {
       link.href = SETTINGS.catalogUrl;
     }
   });
+}
+
+function setupMotion() {
+  const hero = document.querySelector(".hero");
+  const depth = document.querySelector(".hero-depth");
+  if (!hero || !depth) return;
+
+  let ticking = false;
+  const update = () => {
+    const y = Math.min(window.scrollY, 520);
+    const lift = y * -0.045;
+    const zoom = 152 + y * 0.018;
+    if (window.matchMedia("(max-width: 820px)").matches) {
+      hero.style.backgroundSize = `${Math.min(zoom, 166)}% auto`;
+    } else {
+      hero.style.backgroundSize = `auto ${Math.max(88, 92 - y * 0.018)}%`;
+    }
+    depth.style.transform = `translate3d(0, ${lift}px, 0) rotateX(${Math.min(y * 0.018, 8)}deg)`;
+    ticking = false;
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    },
+    { passive: true },
+  );
+  update();
 }
 
 renderContent();
 setupMenu();
 setupReveal();
 syncCommercialLinks();
+setupMotion();
