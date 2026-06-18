@@ -918,11 +918,15 @@ h2 span {
 
   .hero {
     padding-inline: 18px;
-    padding-bottom: 320px;
+    padding-bottom: 0;
     background:
-      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 45%, rgba(2, 8, 22, 0.7) 64%, rgba(2, 8, 22, 0.08) 100%),
-      url("assets/images/hero-drk.png") right bottom / auto 42% no-repeat,
+      radial-gradient(circle at 80% 70%, rgba(248, 189, 36, 0.16), transparent 15rem),
+      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 58%, rgba(2, 8, 22, 0.88) 100%),
       #020816;
+  }
+
+  .hero-copy {
+    padding-bottom: 20px;
   }
 
   h1 {
@@ -935,11 +939,18 @@ h2 span {
   }
 
   .hero-art {
-    display: none;
+    display: block;
+    width: calc(100% + 36px);
+    margin: 8px -18px 0;
+    overflow: hidden;
   }
 
   .hero-art img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     object-position: center;
+    opacity: 1;
   }
 
   .benefits-bar,
@@ -1004,10 +1015,10 @@ h2 span {
   }
 
   .hero {
-    padding-bottom: 260px;
+    padding-bottom: 0;
     background:
-      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 48%, rgba(2, 8, 22, 0.76) 68%, rgba(2, 8, 22, 0.12) 100%),
-      url("assets/images/hero-drk.png") right bottom / auto 35% no-repeat,
+      radial-gradient(circle at 78% 72%, rgba(248, 189, 36, 0.16), transparent 13rem),
+      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 60%, rgba(2, 8, 22, 0.9) 100%),
       #020816;
   }
 
