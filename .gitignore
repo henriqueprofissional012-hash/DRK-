@@ -1,0 +1,7 @@
+*.zip
+cloudflare-upload/
+cloudflare-upload-atualizado/
+node_modules/
+.vercel/
+.DS_Store
+Thumbs.db

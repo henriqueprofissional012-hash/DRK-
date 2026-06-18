@@ -1,0 +1,10 @@
+Para visualizar o site corretamente, nao envie apenas o index.html.
+
+Envie a pasta completa ou este arquivo ZIP inteiro:
+
+- index.html
+- styles.css
+- script.js
+- assets/
+
+Depois de extrair o ZIP, abra o arquivo index.html.
