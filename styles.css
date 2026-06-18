@@ -259,8 +259,8 @@ textarea {
   min-height: calc(100vh - 92px);
   padding: clamp(38px, 5vw, 86px) clamp(20px, 5vw, 84px);
   background:
-    linear-gradient(90deg, #020816 0%, rgba(2, 8, 22, 0.98) 32%, rgba(2, 8, 22, 0.76) 50%, rgba(2, 8, 22, 0.14) 100%),
-    url("assets/images/hero-drk.png") right bottom / auto 90% no-repeat,
+    linear-gradient(90deg, #020816 0%, rgba(2, 8, 22, 0.98) 30%, rgba(2, 8, 22, 0.72) 52%, rgba(2, 8, 22, 0.08) 100%),
+    url("assets/images/hero-drk.png") right bottom / auto 92% no-repeat,
     #020816;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
@@ -332,11 +332,7 @@ h2 span {
 }
 
 .hero-art {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  min-height: 0;
-  display: none;
+  display: none !important;
 }
 
 .hero-art img {
@@ -490,7 +486,7 @@ h2 span {
 .product-card {
   position: relative;
   overflow: hidden;
-  min-height: 100%;
+  min-height: 0;
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
@@ -835,9 +831,10 @@ h2 span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 132px;
-  height: 52px;
-  padding: 0 18px;
+  gap: 8px;
+  min-width: 142px;
+  height: 54px;
+  padding: 0 18px 0 14px;
   color: #ffffff;
   background: linear-gradient(180deg, #25d366, #128c3a);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -848,9 +845,15 @@ h2 span {
   text-transform: uppercase;
 }
 
+.whatsapp-float img {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+}
+
 .section-reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
@@ -875,11 +878,12 @@ h2 span {
 
   .hero {
     grid-template-columns: 1fr;
-    min-height: auto;
+    min-height: calc(100svh - 78px);
     padding-top: 54px;
+    padding-bottom: 260px;
     background:
-      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 35%, rgba(2, 8, 22, 0.66) 62%, rgba(2, 8, 22, 0.16) 100%),
-      url("assets/images/hero-drk.png") right bottom / auto 68% no-repeat,
+      linear-gradient(180deg, rgba(2, 8, 22, 1) 0%, rgba(2, 8, 22, 0.98) 48%, rgba(2, 8, 22, 0.55) 69%, rgba(2, 8, 22, 0.08) 100%),
+      url("assets/images/hero-drk.png") center bottom / 138% auto no-repeat,
       #020816;
   }
 
@@ -928,11 +932,12 @@ h2 span {
 
   .hero {
     padding-inline: 18px;
-    padding-top: 42px;
-    padding-bottom: 260px;
+    min-height: calc(100svh - 78px);
+    padding-top: 34px;
+    padding-bottom: 220px;
     background:
-      linear-gradient(180deg, rgba(2, 8, 22, 0.98) 0%, rgba(2, 8, 22, 0.96) 53%, rgba(2, 8, 22, 0.45) 72%, rgba(2, 8, 22, 0.08) 100%),
-      url("assets/images/hero-drk.png") center bottom / 150% auto no-repeat,
+      linear-gradient(180deg, rgba(2, 8, 22, 1) 0%, rgba(2, 8, 22, 0.98) 54%, rgba(2, 8, 22, 0.52) 74%, rgba(2, 8, 22, 0.08) 100%),
+      url("assets/images/hero-drk.png") center bottom / 152% auto no-repeat,
       #020816;
   }
 
@@ -966,6 +971,65 @@ h2 span {
   .contact,
   .quote-form,
   .site-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .products,
+  .catalog,
+  .filters {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .section-heading {
+    margin-bottom: 22px;
+  }
+
+  .section-heading h2,
+  .split-heading h2 {
+    margin-bottom: 12px;
+  }
+
+  .product-grid,
+  .catalog-grid.compact {
+    gap: 12px;
+  }
+
+  .product-card,
+  .catalog-card {
+    min-height: 0;
+  }
+
+  .product-media {
+    height: 150px;
+  }
+
+  .product-body {
+    padding: 16px;
+  }
+
+  .product-body p {
+    min-height: 0;
+    margin-bottom: 14px;
+  }
+
+  .catalog-card {
+    padding: 14px;
+  }
+
+  .catalog-card img {
+    height: 64px;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(1, 8, 19, 0.42);
+  }
+
+  .catalog-actions {
     grid-template-columns: 1fr;
   }
 
@@ -1003,6 +1067,8 @@ h2 span {
 @media (max-width: 480px) {
   .section {
     padding-inline: 18px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .btn {
@@ -1020,10 +1086,10 @@ h2 span {
 
   .hero {
     padding-top: 36px;
-    padding-bottom: 230px;
+    padding-bottom: 205px;
     background:
-      linear-gradient(180deg, rgba(2, 8, 22, 0.99) 0%, rgba(2, 8, 22, 0.97) 55%, rgba(2, 8, 22, 0.42) 74%, rgba(2, 8, 22, 0.08) 100%),
-      url("assets/images/hero-drk.png") center bottom / 165% auto no-repeat,
+      linear-gradient(180deg, rgba(2, 8, 22, 1) 0%, rgba(2, 8, 22, 0.98) 58%, rgba(2, 8, 22, 0.5) 77%, rgba(2, 8, 22, 0.08) 100%),
+      url("assets/images/hero-drk.png") center bottom / 168% auto no-repeat,
       #020816;
   }
 
@@ -1034,10 +1100,25 @@ h2 span {
   .whatsapp-float {
     right: 14px;
     bottom: 14px;
-    min-width: 112px;
-    height: 46px;
-    padding: 0 14px;
-    font-size: 0.78rem;
+    min-width: 54px;
+    width: 54px;
+    height: 54px;
+    padding: 0;
+  }
+
+  .whatsapp-float span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .whatsapp-float img {
+    width: 32px;
+    height: 32px;
   }
 
   .product-media {
