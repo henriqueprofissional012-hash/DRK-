@@ -190,6 +190,7 @@ textarea {
 
 .menu-toggle {
   display: none;
+  justify-self: end;
   width: 48px;
   height: 48px;
   padding: 0;
@@ -263,6 +264,11 @@ textarea {
     #020816;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
+}
+
+.hero.section-reveal {
+  opacity: 1;
+  transform: none;
 }
 
 .hero::before {
@@ -826,16 +832,20 @@ h2 span {
   right: 22px;
   bottom: 22px;
   z-index: 18;
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  color: #07101f;
-  background: linear-gradient(180deg, var(--gold-400), var(--gold-500));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 132px;
+  height: 52px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: linear-gradient(180deg, #25d366, #128c3a);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
-  box-shadow: 0 14px 34px rgba(248, 189, 36, 0.3);
+  box-shadow: 0 14px 34px rgba(18, 140, 58, 0.32);
   font-weight: 900;
-  font-size: 1.35rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 .section-reveal {
@@ -918,10 +928,11 @@ h2 span {
 
   .hero {
     padding-inline: 18px;
-    padding-bottom: 0;
+    padding-top: 42px;
+    padding-bottom: 260px;
     background:
-      radial-gradient(circle at 80% 70%, rgba(248, 189, 36, 0.16), transparent 15rem),
-      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 58%, rgba(2, 8, 22, 0.88) 100%),
+      linear-gradient(180deg, rgba(2, 8, 22, 0.98) 0%, rgba(2, 8, 22, 0.96) 53%, rgba(2, 8, 22, 0.45) 72%, rgba(2, 8, 22, 0.08) 100%),
+      url("assets/images/hero-drk.png") center bottom / 150% auto no-repeat,
       #020816;
   }
 
@@ -930,27 +941,18 @@ h2 span {
   }
 
   h1 {
-    font-size: clamp(2.35rem, 14vw, 4.2rem);
+    font-size: clamp(2.25rem, 10.5vw, 3.4rem);
+    line-height: 1.02;
+    margin-bottom: 18px;
   }
 
-  .hero-actions,
-  .hero-actions .btn {
+  .hero-actions {
     width: 100%;
+    gap: 10px;
   }
 
   .hero-art {
-    display: block;
-    width: calc(100% + 36px);
-    margin: 8px -18px 0;
-    overflow: hidden;
-  }
-
-  .hero-art img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-    opacity: 1;
+    display: none;
   }
 
   .benefits-bar,
@@ -1007,19 +1009,35 @@ h2 span {
     width: 100%;
     min-height: 50px;
     padding-inline: 16px;
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    margin-bottom: 24px;
+    font-size: 0.98rem;
+    line-height: 1.55;
   }
 
   .hero {
-    padding-bottom: 0;
+    padding-top: 36px;
+    padding-bottom: 230px;
     background:
-      radial-gradient(circle at 78% 72%, rgba(248, 189, 36, 0.16), transparent 13rem),
-      linear-gradient(180deg, #020816 0%, rgba(2, 8, 22, 0.98) 60%, rgba(2, 8, 22, 0.9) 100%),
+      linear-gradient(180deg, rgba(2, 8, 22, 0.99) 0%, rgba(2, 8, 22, 0.97) 55%, rgba(2, 8, 22, 0.42) 74%, rgba(2, 8, 22, 0.08) 100%),
+      url("assets/images/hero-drk.png") center bottom / 165% auto no-repeat,
       #020816;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+  }
+
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    min-width: 112px;
+    height: 46px;
+    padding: 0 14px;
+    font-size: 0.78rem;
   }
 
   .product-media {
