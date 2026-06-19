@@ -202,6 +202,8 @@ const assistance = [
 ];
 
 const imagePath = (name) => `assets/images/${name}`;
+const mapsUrl = (address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+const mapsEmbedUrl = (address) => `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
 function productCard(item) {
   return `
@@ -303,11 +305,23 @@ function renderContent() {
       (item) => `
         <article class="assistance-card">
           <h3>${item.name}</h3>
+          <div class="map-frame">
+            <iframe
+              title="Localização de ${item.name}"
+              src="${mapsEmbedUrl(item.address)}"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
           <p><strong>Endereço:</strong><br />${item.address}</p>
           <p><strong>Contato:</strong> ${item.contact}</p>
           <p><strong>E-mail:</strong> ${item.email}</p>
           <p><strong>Telefone:</strong> ${item.phone}</p>
-          <a class="btn btn-outline" href="mailto:${item.email}">Entrar em contato</a>
+          <div class="assistance-actions">
+            <a class="btn btn-primary" href="${mapsUrl(item.address)}" target="_blank" rel="noreferrer">Abrir rota <span>→</span></a>
+            <a class="btn btn-outline" href="mailto:${item.email}">E-mail</a>
+          </div>
         </article>
       `,
     )
