@@ -595,49 +595,91 @@ h2 span {
 .catalog-grid.compact {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: 16px;
 }
 
-.catalog-chip {
+.pump-card {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 74px;
-  padding: 16px;
+  display: grid;
+  min-height: 226px;
   overflow: hidden;
   background:
-    linear-gradient(145deg, rgba(14, 42, 82, 0.76), rgba(3, 14, 33, 0.9)),
+    radial-gradient(circle at 72% 10%, rgba(36, 168, 255, 0.2), transparent 32%),
+    linear-gradient(145deg, rgba(14, 42, 82, 0.82), rgba(3, 14, 33, 0.94)),
     var(--panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
-  transition: transform 0.24s ease, border-color 0.24s ease;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 
-.catalog-chip::after {
+.pump-card::after {
   content: "";
   position: absolute;
-  inset: auto -20% -60% auto;
-  width: 90px;
-  height: 90px;
-  background: radial-gradient(circle, rgba(248, 189, 36, 0.28), transparent 66%);
+  inset: auto -18% -44% auto;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(248, 189, 36, 0.3), transparent 68%);
+  pointer-events: none;
 }
 
-.catalog-chip:hover {
-  transform: translateY(-4px) rotateX(3deg);
+.pump-card:hover {
+  transform: translateY(-5px);
   border-color: rgba(248, 189, 36, 0.55);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.3);
 }
 
-.catalog-chip span {
-  color: #ffffff;
-  font-weight: 900;
+.pump-card-media {
+  display: grid;
+  place-items: center;
+  height: 126px;
+  padding: 16px 16px 4px;
+  background:
+    radial-gradient(circle at 50% 76%, rgba(36, 168, 255, 0.22), transparent 44%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent);
 }
 
-.catalog-chip strong {
+.pump-card-media img {
+  width: 100%;
+  height: 106px;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 26px rgba(0, 0, 0, 0.44));
+  transition: transform 0.24s ease;
+}
+
+.pump-card:hover .pump-card-media img {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.pump-card-body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: end;
+  gap: 8px;
+  min-height: 103px;
+  padding: 0 18px 18px;
+}
+
+.pump-card-body small {
   color: var(--gold-400);
-  font-size: 0.74rem;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.pump-card-body strong {
+  color: #ffffff;
+  font-size: 0.98rem;
+  line-height: 1.22;
+}
+
+.pump-card-body em {
+  color: var(--gold-500);
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -707,9 +749,8 @@ h2 span {
 .filters-showcase {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  gap: 24px;
   margin: 0 0 24px;
   overflow: hidden;
   background:
@@ -725,22 +766,28 @@ h2 span {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0 58%, rgba(248, 189, 36, 0.16));
+  background:
+    linear-gradient(90deg, rgba(2, 8, 22, 0.78) 0%, rgba(2, 8, 22, 0.34) 42%, rgba(2, 8, 22, 0) 70%),
+    linear-gradient(120deg, transparent 0 58%, rgba(248, 189, 36, 0.1));
   pointer-events: none;
 }
 
 .filters-showcase img {
   width: 100%;
-  height: 260px;
+  height: 340px;
   object-fit: cover;
-  object-position: left center;
+  object-position: center center;
   filter: saturate(1.08) contrast(1.05);
 }
 
 .filters-showcase div {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  max-width: 460px;
   z-index: 1;
-  padding: 24px 28px 24px 0;
+  padding: 0 0 0 32px;
+  transform: translateY(-50%);
 }
 
 .filters-showcase strong,
@@ -1217,10 +1264,18 @@ h2 span {
     display: none;
   }
 
-  .catalog-chip {
-    flex: 0 0 178px;
+  .pump-card {
+    flex: 0 0 224px;
     scroll-snap-align: start;
-    min-height: 72px;
+    min-height: 226px;
+  }
+
+  .pump-card-media {
+    height: 124px;
+  }
+
+  .pump-card-media img {
+    height: 102px;
   }
 
   .product-card,
@@ -1265,12 +1320,25 @@ h2 span {
   }
 
   .filters-showcase img {
-    height: 190px;
-    object-position: 25% center;
+    height: 230px;
+    object-position: 58% center;
   }
 
   .filters-showcase div {
+    left: 0;
+    top: auto;
+    bottom: 0;
+    max-width: 82%;
     padding: 18px;
+    transform: none;
+  }
+
+  .filters-showcase strong {
+    font-size: 1.28rem;
+  }
+
+  .filters-showcase span {
+    font-size: 0.92rem;
   }
 
   .filters .product-media {
@@ -1383,11 +1451,11 @@ h2 span {
   }
 
   .filters-showcase img {
-    height: 170px;
+    height: 210px;
   }
 
-  .catalog-chip {
-    flex-basis: 154px;
+  .pump-card {
+    flex-basis: 210px;
   }
 
   .eyebrow {

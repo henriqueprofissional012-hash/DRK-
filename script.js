@@ -89,6 +89,33 @@ const pumpSeries = [
   "CWX",
 ];
 
+const pumpCatalogDetails = {
+  ADO: {
+    image: "produto-bomba-ado.png",
+    category: "Banheiras, ofurôs e spas",
+  },
+  CA: {
+    image: "produto-bomba-ca.png",
+    category: "Aplicações hidráulicas gerais",
+  },
+  CAE: {
+    image: "produto-bomba-cae.png",
+    category: "Instalações compactas",
+  },
+  CB: {
+    image: "produto-bomba-cb.png",
+    category: "Maior vazão e rendimento",
+  },
+  CD: {
+    image: "produto-bomba-cd.png",
+    category: "Abastecimento e pressurização",
+  },
+  CF: {
+    image: "produto-bomba-cf.png",
+    category: "Combate a incêndio",
+  },
+};
+
 const filters = [
   {
     name: "Série FAPI",
@@ -220,6 +247,26 @@ function filterCard(item, index) {
   `;
 }
 
+function pumpCard(series) {
+  const detail = pumpCatalogDetails[series] || {
+    image: "produto-bomba-ca.png",
+    category: "Consulta técnica e comercial",
+  };
+
+  return `
+    <a class="pump-card" href="#contato" aria-label="Solicitar informações da Série ${series}">
+      <span class="pump-card-media">
+        <img src="${imagePath(detail.image)}" alt="Bomba hidráulica Série ${series}" loading="lazy" />
+      </span>
+      <span class="pump-card-body">
+        <small>Série ${series}</small>
+        <strong>${detail.category}</strong>
+        <em>Ver detalhes →</em>
+      </span>
+    </a>
+  `;
+}
+
 function renderContent() {
   document.querySelector("#valuesGrid").innerHTML = values
     .map(
@@ -237,14 +284,7 @@ function renderContent() {
   document.querySelector("#filterCatalog").innerHTML = filters.map(filterCard).join("");
 
   document.querySelector("#pumpCatalog").innerHTML = pumpSeries
-    .map(
-      (series) => `
-        <a class="catalog-chip" href="#contato" aria-label="Solicitar informacoes da Serie ${series}">
-          <span>Serie ${series}</span>
-          <strong>Consultar</strong>
-        </a>
-      `,
-    )
+    .map(pumpCard)
     .join("");
 
   document.querySelector("#regionsGrid").innerHTML = regions
