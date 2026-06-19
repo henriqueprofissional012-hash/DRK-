@@ -128,7 +128,7 @@ const filters = [
   {
     name: "Série D",
     text: "Indicada para piscinas olímpicas e grandes volumes de água.",
-    image: "produto-filtros.png",
+    image: "filtro-dfl.png",
   },
   {
     name: "Sistema de Pressurização",
