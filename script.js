@@ -350,6 +350,30 @@ function setupMenu() {
   });
 }
 
+function setupPumpCatalog() {
+  const section = document.querySelector("#bombas");
+  const button = document.querySelector(".catalog-toggle");
+  const menuLinks = document.querySelectorAll('a[href="#bombas"]');
+  if (!section || !button) return;
+
+  const setOpen = (isOpen) => {
+    section.classList.toggle("is-collapsed", !isOpen);
+    button.setAttribute("aria-expanded", String(isOpen));
+    button.innerHTML = isOpen ? 'Ocultar séries <span>↑</span>' : 'Ver séries de bombas <span>→</span>';
+  };
+
+  button.addEventListener("click", () => {
+    const isOpen = section.classList.contains("is-collapsed");
+    setOpen(isOpen);
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      setOpen(true);
+    });
+  });
+}
+
 function setupReveal() {
   const sections = document.querySelectorAll(".section-reveal");
   const observer = new IntersectionObserver(
@@ -407,6 +431,7 @@ function setupMotion() {
 
 renderContent();
 setupMenu();
+setupPumpCatalog();
 setupReveal();
 syncCommercialLinks();
 setupMotion();
