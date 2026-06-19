@@ -608,9 +608,9 @@ h2 span {
   cursor: pointer;
   min-width: 238px;
   color: #031027;
-  background: linear-gradient(180deg, var(--gold-300), var(--gold-500));
-  border-color: rgba(255, 212, 75, 0.92);
-  box-shadow: 0 18px 42px rgba(248, 189, 36, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.48);
+  background: linear-gradient(180deg, #ffe47a 0%, #f8bd24 54%, #d99400 100%);
+  border-color: #ffd45c;
+  box-shadow: 0 18px 42px rgba(248, 189, 36, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.62);
 }
 
 .catalog-toggle:hover,
