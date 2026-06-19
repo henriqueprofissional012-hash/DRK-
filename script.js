@@ -191,6 +191,35 @@ function productCard(item) {
   `;
 }
 
+function filterCard(item, index) {
+  const categories = [
+    "Tratamento de Água",
+    "Tratamento Industrial",
+    "Irrigação",
+    "Separação de Sedimentos",
+    "Piscinas",
+    "Casa de Máquinas",
+    "Fibra de Vidro",
+    "Grandes Volumes",
+    "Pressurização",
+    "Esterilização",
+  ];
+
+  return `
+    <article class="product-card filter-card">
+      <div class="filter-card-top">
+        <span>${String(index + 1).padStart(2, "0")}</span>
+        <strong>${categories[index] || "Solução DRK"}</strong>
+      </div>
+      <div class="product-body">
+        <h3>${item.name}</h3>
+        <p>${item.text}</p>
+        <a class="text-link" href="#contato">Solicitar aplicação →</a>
+      </div>
+    </article>
+  `;
+}
+
 function renderContent() {
   document.querySelector("#valuesGrid").innerHTML = values
     .map(
@@ -205,7 +234,7 @@ function renderContent() {
     .join("");
 
   document.querySelector("#featuredProducts").innerHTML = featuredProducts.map(productCard).join("");
-  document.querySelector("#filterCatalog").innerHTML = filters.map(productCard).join("");
+  document.querySelector("#filterCatalog").innerHTML = filters.map(filterCard).join("");
 
   document.querySelector("#pumpCatalog").innerHTML = pumpSeries
     .map(
