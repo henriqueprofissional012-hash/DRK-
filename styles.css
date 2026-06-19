@@ -87,7 +87,7 @@ textarea {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 24px;
   min-height: 92px;
@@ -108,9 +108,9 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(14px, 2vw, 30px);
+  gap: clamp(10px, 1.35vw, 22px);
   color: rgba(255, 255, 255, 0.86);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
 }
 
@@ -254,10 +254,10 @@ textarea {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(340px, 1fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1fr);
   align-items: center;
   min-height: calc(100vh - 92px);
-  padding: clamp(38px, 5vw, 86px) clamp(20px, 5vw, 84px);
+  padding: clamp(38px, 5vw, 76px) clamp(20px, 5vw, 72px);
   background:
     linear-gradient(90deg, #020816 0%, rgba(2, 8, 22, 0.98) 30%, rgba(2, 8, 22, 0.72) 52%, rgba(2, 8, 22, 0.08) 100%),
     url("assets/images/hero-drk.png") right bottom / auto 92% no-repeat,
@@ -306,8 +306,8 @@ p {
 
 h1 {
   margin-bottom: 24px;
-  font-size: clamp(2.7rem, 5.8vw, 6.2rem);
-  line-height: 0.98;
+  font-size: clamp(2.55rem, 4.45vw, 4.95rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
