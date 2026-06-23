@@ -927,9 +927,9 @@ h2 span {
 
 .national-map img {
   width: 100%;
-  min-height: 420px;
+  min-height: 560px;
   object-fit: cover;
-  object-position: center 34%;
+  object-position: center center;
 }
 
 .regions-grid {
@@ -1477,8 +1477,8 @@ h2 span {
   }
 
   .national-map img {
-    min-height: 300px;
-    object-position: center 28%;
+    min-height: 420px;
+    object-position: center center;
   }
 
   .map-frame {
